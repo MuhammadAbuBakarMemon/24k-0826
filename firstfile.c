@@ -4,5 +4,13 @@
 
 int main(void)
 {
-    
+    int x = 1;
+    if (x > 15)
+    {
+        printf("Threshold Matched....")
+    }
+    else
+    {
+        printf("Threshold Not Matched....")
+    }
 }
