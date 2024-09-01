@@ -7,6 +7,8 @@ Assalam u Alaikum, I'm  Muhammad Abu Bakar. I graduated from Nixor College, comp
 
 ### Nationality
 
+I am a Pakistani resident. 
+
 ![The flag in the following Image represents my country of origin.](https://img.freepik.com/free-vector/illustration-pakistan-flag_53876-27123.jpg?size=626&ext=jpg)
 
 ### My Intrests
