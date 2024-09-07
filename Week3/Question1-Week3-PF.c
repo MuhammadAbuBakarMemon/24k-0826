@@ -1,1 +1,0 @@
-Answer1) The reason is that the value assigned to the variable "testInteger" is "3000000000" which exceedes the maximum limit of data that can be stored by a variable of Integer datatype. Hence, when the program is executed the value displayed in the command prompt/terminal window that is out of the blue, an error value.
