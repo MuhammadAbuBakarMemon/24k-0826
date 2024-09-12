@@ -11,6 +11,6 @@
 	taxtopay = (sal * tr) / 100;
 	f_sal = sal - taxtopay;
 
-	printf("The tax to be paid is: %d, and the salary you will have afterwards is: ", taxtopay, f_sal); 
+	printf("The tax to be paid is: %d, and the salary you will have afterwards is: %d", taxtopay, f_sal); 
 	return 0;
 }
