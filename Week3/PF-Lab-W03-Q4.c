@@ -6,7 +6,7 @@ int main()
 	int f_avg, f_used, fuel_cost, f_cost, r_cost, f_fp = 118, r_fp = 123;
 
 	printf("Please enter the fuel average of your car: \n");
-	sacnf("%d", &f_avg);
+	scanf("%d", &f_avg);
 	
 	if (f_avg > 0)
 	{
@@ -21,9 +21,8 @@ int main()
 	}
 	else
 	{
-		printf("Invalid value for the fuel average was passed....\n")
+		printf("Invalid value for the fuel average was passed....\n");
 	}
 
-	
 	return 0;
 }
