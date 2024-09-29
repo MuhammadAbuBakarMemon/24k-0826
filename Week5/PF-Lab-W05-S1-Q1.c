@@ -2,9 +2,9 @@
 
 int main()
 {   
-    int num;
+    int age;
     printf("Please enter your age: \n");
-    scanf("%d", &num);
+    scanf("%d", &age);
 
     if (age >= 0 && age <=12)
     {
@@ -14,12 +14,14 @@ int main()
     {
         printf("Teenager....\n");
     }
-    else if (age >= 20 && age <= 61)
+    else if (age >= 20 && age <= 64)
     {
         printf("Adult....\n");
     }
-    else 
+    else if (age >= 65)
     {
-        primtf("Senior....\n");
+        printf("Senior....\n");
     }
+
+    return 0;
 }

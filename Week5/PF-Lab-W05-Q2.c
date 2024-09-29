@@ -6,13 +6,14 @@ int main()
     float score, result, aggregate;
     printf("Please enter your attendance in precentage: ");
     scanf("%d", &attendance);
-    printf("Please enter your assignment score's average: ");
-    scanf("%f", &score);
-    printf("Please enter your exam results: ");
-    scanf("%f", &result);
 
     if (attendance >= 80)
-    {
+    {   
+        printf("Please enter your assignment score's average: ");
+        scanf("%f", &score);
+        printf("Please enter your exam results: ");
+        scanf("%f", &result);
+        
         aggregate = (result * 0.7) + (score * 0.3);
         if (aggregate>= 90)
         {
@@ -36,7 +37,7 @@ int main()
         }
         else
         {
-             printf("Unfortunately, due to insufficient aggregate you failed, and will have to repeat this particular course....");
+             printf("Unfortunately, due to insufficient aggregate you failed and will have to repeat this particular course....");
         }
     }
     else 

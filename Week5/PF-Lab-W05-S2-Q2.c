@@ -4,12 +4,13 @@ int main()
 {	
 	int age;
 	char citizenship;
-	printf("Please enter your age: ");
+
+	printf("Please enter your age: \n");
 	scanf("%d", &age);
-	printf("Please enter your citizenship P for Pakistani and F for Forigen: ");
+	printf("Please enter your citizenship P for Pakistani and F for Forigen: \n");
 	scanf(" %c", &citizenship);
 
-	if (age > 17 && citizenship == 'p' || citizenship == 'P')
+	if (age > 17 && (citizenship == 'p' || citizenship == 'P'))
 	{
 		printf("You are eligible to vote....\n");
 	}
@@ -17,9 +18,9 @@ int main()
 	{
 		printf("If you're not Pakistani be happy, as you're a lucky person, and please only consider voting in your country....\n");
 	}
-	else if (citizenship == 'P' || citizenship == 'P')
+	else if (citizenship == 'P' || citizenship == 'p')
 	{
-		printf("Please wait for a few years to meet the eligibility criteria");
+		printf("Please wait for a few years to meet the eligibility criteria\n");
 	}
 	else
 	{

@@ -7,5 +7,6 @@ int main()
     scanf("%f", &number);
 
     number == 0 ? printf("The number is zero....\n") : number > 0 ? printf("The number is a positive number....") : printf("The number is a negative number....\n");
+  
     return 0;
 }

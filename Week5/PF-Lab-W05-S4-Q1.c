@@ -16,11 +16,9 @@ int main()
     printf("Please enter your 2nd number: \n");
     scanf("%d", &n2);
 
-    printf("%d\n", ~n2);
-
-
-    printf("The swapped 1st number is: %d\n", n2^(~n2));
-    printf("The swapped 2nd number is: %d\n", n1^(~n1));
+    printf("The swapped 1st number is: %d\n", n2^0);
+    printf("The swapped 2nd number is: %d\n", n1^0);
+    
     return 0;
 }
 
