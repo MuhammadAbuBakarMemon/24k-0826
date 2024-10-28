@@ -65,6 +65,13 @@ int main(void)
     {
         for (int n = 0; n < c1; n++)
         {
+            for (int o = 0; o = m; o++)
+            {
+                for (int p = 0; p < c1; p++)
+                {
+                    r_mat[m][n] = 
+                }
+            }
             r_mat[m][n] = mat1[m][n] * mat2[m][n];
         }
     }
