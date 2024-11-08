@@ -6,34 +6,6 @@ Since we are required to terminate our loop once the user enters a zero, this me
 So we can use either of the condtion controlled loops for our function
 */
 
-//Implemented Via While Loop
-/*
-If we use a While Loop since this is a pre-conditional loop this checks our condition before executing the blocks of code
-as a result the only small extra work we are required to do here is that we need to take an output once outside the loop so a value is assigned to a our variable 
-and we can check make a comparison for our respective condition against that value
-Later on inside the loop we are also required to retake the input and update the variable so the loop continues to take input until until a zero is entered and the vale of our variable is constantly updated on each iteration
-*/
-
-int main()
-{
-    int num;
-    
-    printf("Please enter a non-zero value: \n");
-    scanf("%d", &num);
-
-    while (num != 0)
-    {
-        int sample = 6;
-
-        printf("The result would mount to: %d\n", sample += num);
-        printf("Please enter a non-zero value: \n");
-        scanf("%d", &num);
-    }
-
-    printf("The loop got terminated because you entered a zero....\n");
-
-    return 0;
-}
 
 //Imlemented Via Do While Loop
 /*
@@ -44,11 +16,13 @@ We do this and this is termed as extra work because in the while loop our condit
 
 int main()
 {
+    int num;
+
     do 
     {
-        int num, sample = 8;
+        int sample = 8;
 
-        printf("Please enter a non- zero value: \n");
+        printf("Please enter a non-zero value: \n");
         scanf("%d", &num);
 
         // The process of adddition and printing on the new value after summation would only take place if the number entered is not erquals to zero
@@ -60,10 +34,40 @@ int main()
         }
 
     }
-    while (num != 0)
+    while (num != 0);
 
     printf("The loop got terminated because you entered a zero....\n");
 
     return 0;
 
 }
+
+//Commented out
+//Implemented Via While Loop
+/*
+If we use a While Loop since this is a pre-conditional loop this checks our condition before executing the blocks of code
+as a result the only small extra work we are required to do here is that we need to take an output once outside the loop so a value is assigned to a our variable 
+and we can check make a comparison for our respective condition against that value
+Later on inside the loop we are also required to retake the input and update the variable so the loop continues to take input until until a zero is entered and the vale of our variable is constantly updated on each iteration
+*/
+
+// int main()
+// {
+//     int num;
+    
+//     printf("Please enter a non-zero value: \n");
+//     scanf("%d", &num);
+
+//     while (num != 0)
+//     {
+//         int sample = 6;
+
+//         printf("The result would mount to: %d\n", sample += num);
+//         printf("Please enter a non-zero value: \n");
+//         scanf("%d", &num);
+//     }
+
+//     printf("The loop got terminated because you entered a zero....\n");
+
+//     return 0;
+// }
