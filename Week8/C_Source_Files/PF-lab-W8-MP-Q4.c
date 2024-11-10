@@ -8,83 +8,105 @@ int main(void)
     int r2 = 0;
     int c2 = 0;
 
-    printf("Please enter the number of rows and columns you would like to have in your frst matrix, respectively: ");
-    scanf("%d %d", &r1, &c1);
+    printf("Please enter the number of rows for your first matrix: \n");
+    scanf("%d", &r1);
 
-    printf("Please enter the number of rows and columns you would like to have in your second matrix, respectively: ");
-    scanf("%d %d", &r2, &c2);
-
-    //checking that the number of rwos and co;umns in both matrices are greater than zero, because a matrix must have a minimum of one row and onr column
-
-    if (r1 < 1 || r2 < 1 || c1 < 1 || c2 < 1)
-    {   
-        printf("Both the matrices must each have at least a minimun of 1 row and 1 column....");
+    if (r1 < 1)
+    {
+        printf("The minimum number of rows in a matrix must be 1....\n");
         return 0;
     }
 
-    //checking condition that must be satisfied to multiply two matrix
+    printf("Please enter the number of columns for your first matrix: \n");
+    scanf("%d", &c1);
 
-    if (c1 != r2)
+    if (c1 < 1)
     {
-        printf("The matrix multiplication can not take place/the attempted multiplication operation is invalid as the number of columns in your first matrix do not match the number of rows in your second matrix....");
+        printf("The minimum number of columns in a matrix must be 1....\n");
         return 0;
     }
 
-    int mat1[r1][c1]; 
-    int mat2[r2][c2];
+    int mat1[r1][c1];
 
-    int r_mat[r2][c1];
-
-    printf("Please enter the data values that you would like to input in your first matrix: \n");
-
-    for (int m = 0; m <= 2; m++)
+    for (int m  = 0; m < r1; m++)
     {
-        for (int n = 0; n <= 2; n++)
+        for (int n = 0; n < c1; n++)
         {
-            printf("Element at row no# %d and column number %d: \n", m, n);
+            printf("Element [%d][%d]: \n", m, n);
             scanf("%d", &mat1[m][n]);
         }
     }
 
-    printf("\n");
+    printf("Please enter the number of rows for your second matrix: \n");
+    scanf("%d", &r2);
 
-    printf("Please enter the data values that you would like to input in your second matrix: \n");
-
-    for (int m = 0; m <= 2; m++)
+    if (r2 < 1)
     {
-        for (int n = 0; n <= 2; n++)
+        printf("The minimum number of rows in a matrix must be 1....\n");
+        return 0;
+    }
+
+    printf("Please enter the number of columns for your second matrix: \n");
+    scanf("%d", &c2);
+
+     if (c2 < 1)
+    {
+        printf("The minimum number of columns in a matrix must be 1....\n");
+        return 0;
+    }
+
+    int mat2[r2][c2];
+
+    for (int m  = 0; m < r2; m++)
+    {
+        for (int n = 0; n < c2; n++)
         {
-            printf("Element at row no# %d and column number %d: \n", m, n);
+            printf("Element [%d][%d]: \n", m, n);
             scanf("%d", &mat2[m][n]);
         }
     }
 
-    //Matrix multipluication
+    //condition to check if matrix multiplication is valid or not?
 
-    for (int m = 0; m < r2; m++)
+    if (c1 != r2)
     {
-        for (int n = 0; n < c1; n++)
-        {
-            for (int o = 0; o = m; o++)
-            {
-                for (int p = 0; p < c1; p++)
-                {
-                    r_mat[m][n] = 
-                }
-            }
-            r_mat[m][n] = mat1[m][n] * mat2[m][n];
-        }
+        printf("Unfortunately, the desired matrix multiplication can not go through as the number of column in the first matrix are not equal to the number of rows in the second matrix....\n");
+        return 0;
     }
 
-    //outputing/printing the resultant matrix
+    //Matrix Multiplication
 
-    for (int m = 0; m <= 2; m++)
+    int rmat[r1][c2];    
+
+    for (int m = 0; m < r1; m++)
     {
-        for (int n = 0; n <= 2; n++)
+        for(int n = 0; n < c2; n++)
         {
-            printf("Element at row no# %d and column number %d is: %d\n", m, n, r_mat[m][n]);
+            rmat[m][n] = 0;
         }
-    } 
+    }                                                                                        
+
+    for (int m = 0; m < r1; m++)
+    {   
+        for (int n = 0; n < c2; n++)
+        {
+            for (int x = 0; x < c1; x++)
+            {
+                rmat[m][n] += mat1[m][x] * mat2[x][n];
+            }
+        }        
+    }
+
+
+    printf("The resultant Matrix after multiplication is: \n");
+
+    for (int m = 0; m < r1; m++)
+    {
+        for (int n = 0; n < c2; n++)
+        {
+            printf("Element [%d][%d]: %d\n", m, n, rmat[m][n]);
+        }
+    }
 
     return 0;
 }
