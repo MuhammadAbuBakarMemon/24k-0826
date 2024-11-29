@@ -3,6 +3,7 @@
 
 void addnewcars(struct Cars *n, int *num, int n1);
 void displaycars(struct Cars *n, int *num);
+void search_for_cars(struct Cars *n, int *num);
 
 struct Cars 
 {
@@ -82,6 +83,25 @@ void displaycars(struct Cars *n, int *num)
 
         printf("The model is: \n");
         fputs(n[*num].model, stdout);
+
+        printf("The year for the  car is: %d\n", n[*num].year);
+
+        printf("The price for your car is: %.2f\n", n[*num].price);
+
+        printf("The mileage for your car is: %f\n", n[*num].mileage);
+
+        printf("\n");
+
     }
+
+}
+
+void search_for_cars(struct Cars *n, int *num)
+{
+    printf("Please choose the option that has the appropriate property of the car on the basis of which you would like to search from the database: \n");
+    printf("1. Make\n");
+    printf("2. Model\n");
+
+    if ()
 
 }
