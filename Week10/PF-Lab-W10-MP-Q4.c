@@ -98,10 +98,27 @@ void displaycars(struct Cars *n, int *num)
 
 void search_for_cars(struct Cars *n, int *num)
 {
+
+    int opt = 0;
+
     printf("Please choose the option that has the appropriate property of the car on the basis of which you would like to search from the database: \n");
     printf("1. Make\n");
     printf("2. Model\n");
+    printf("Press any other key lto exit.");
+    scanf("%d", &opt);
 
-    if ()
+    if (opt == 1)
+    {
+
+    }
+    else if (opt == 2)
+    {
+
+    }
+    else
+    {
+        printf("Exiting program....\n");
+        return 0;
+    }
 
 }
